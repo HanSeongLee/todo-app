@@ -14,7 +14,7 @@ $breakpoints: (mobile: 568px, tablet: 767px, desktop: 992px);
   --theme-input-text-color: #393A4B;
   --theme-gradient-color: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
   --theme-highlight-color: var(--theme-natural-color);
-  --theme--box-color: var(--theme-white-color);
+  --theme-box-color: var(--theme-white-color);
 
   @include media(">desktop") {
     --theme-background-image: url("/img/bg-desktop-light.jpg");
@@ -33,7 +33,7 @@ $breakpoints: (mobile: 568px, tablet: 767px, desktop: 992px);
   --theme-input-text-color: var(--theme-natural-color);
   --theme-gradient-color: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
   --theme-highlight-color: #E3E4F1;
-  --theme--box-color: #25273D;
+  --theme-box-color: #25273D;
 
   @include media(">desktop") {
     --theme-background-image: url("/img/bg-desktop-dark.jpg");
