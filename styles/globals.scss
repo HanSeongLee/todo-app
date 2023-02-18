@@ -5,15 +5,15 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 18px;
   background: var(--theme-background-color);
+  color: var(--theme-natural-color);
   transition: background 0.3s;
 }
 
 body {
   position: relative;
-  background: red;
 
   &::before {
     position: absolute;
