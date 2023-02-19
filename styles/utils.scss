@@ -15,6 +15,7 @@ $breakpoints: (mobile: 568px, tablet: 767px, desktop: 992px);
   --theme-gradient-color: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
   --theme-highlight-color: var(--theme-natural-color);
   --theme-box-color: var(--theme-white-color);
+  --theme-box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
 
   @include media(">desktop") {
     --theme-background-image: url("/img/bg-desktop-light.jpg");
@@ -34,6 +35,7 @@ $breakpoints: (mobile: 568px, tablet: 767px, desktop: 992px);
   --theme-gradient-color: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
   --theme-highlight-color: #E3E4F1;
   --theme-box-color: #25273D;
+  --theme-box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
 
   @include media(">desktop") {
     --theme-background-image: url("/img/bg-desktop-dark.jpg");
