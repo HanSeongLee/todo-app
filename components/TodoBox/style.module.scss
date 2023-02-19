@@ -2,9 +2,11 @@
 .todoBox {
   display: flex;
   align-items: center;
+  background: var(--theme-box-color);
   padding: 16px 20px;
   word-break: break-word;
   outline: none;
+  cursor: pointer;
 
   &.completed {
     .contents {
