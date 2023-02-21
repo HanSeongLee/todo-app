@@ -1,0 +1,25 @@
+
+.tabs {
+  min-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 19px;
+  background: var(--theme-box-color);
+  box-shadow: var(--theme-box-shadow);
+  border-radius: 5px;
+  list-style: none;
+
+  .item {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.19px;
+    color: var(--theme-secondary-color);
+    cursor: pointer;
+
+    &.active {
+      color: var(--theme-primary-color);
+    }
+  }
+}
