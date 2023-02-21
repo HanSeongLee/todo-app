@@ -1,0 +1,48 @@
+
+.todoList {
+  background: var(--theme-box-color);
+  box-shadow: var(--theme-box-shadow);
+  border-radius: 5px;
+  overflow: hidden;
+
+  .todoBoxContainer {
+    list-style: none;
+
+    > li {
+      min-height: 50px;
+
+      border-top: 1px solid var(--theme-light-gray-color);
+
+      &:first-child {
+        border-top: 0;
+      }
+    }
+
+    .todoBoxItem {
+      &.drag {
+        display: none;
+      }
+    }
+  }
+
+  .footer {
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--theme-light-gray-color);
+    padding: 0 20px;
+
+    .activeItemCount {
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: -0.17px;
+      color: var(--theme-secondary-color);
+    }
+
+    .buttonContainer {
+      display: flex;
+      gap: 4px;
+    }
+  }
+}
