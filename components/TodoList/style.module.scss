@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .todoList {
   background: var(--theme-box-color);
@@ -38,6 +39,12 @@
       line-height: 12px;
       letter-spacing: -0.17px;
       color: var(--theme-secondary-color);
+
+      @include media(">desktop") {
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: -0.19px;
+      }
     }
 
     .buttonContainer {

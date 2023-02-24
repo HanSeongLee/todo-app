@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import styles from './style.module.scss';
 import TodoBox from 'components/TodoBox';
 import cn from 'classnames';
@@ -30,12 +30,12 @@ const Draggable = dynamic<DraggableProps>(
 );
 
 interface IProps extends HTMLAttributes<HTMLDivElement>, TodoList {
-
+    footer?: ReactNode;
 }
 
 const TodoList: React.FC<IProps> = ({
                                         todos, onCheck, onRemove, onClear,
-                                        onCompleted, onReorder
+                                        onCompleted, onReorder, footer
                                     }) => {
     const activeItemCount = todos.filter(({ completed }) => !completed).length;
 
@@ -82,9 +82,15 @@ const TodoList: React.FC<IProps> = ({
             </DragDropContext>
 
             <div className={styles.footer}>
-                    <span className={styles.activeItemCount}>
-                                {activeItemCount === 0 ? 'No' : activeItemCount} {activeItemCount === 1 ? 'item' : 'items'} left
-                    </span>
+                <span className={styles.activeItemCount}>
+                    {activeItemCount === 0 ? 'No' : activeItemCount} {activeItemCount === 1 ? 'item' : 'items'} left
+                </span>
+
+                {footer && (
+                    <div>
+                        {footer}
+                    </div>
+                )}
 
                 <div className={styles.buttonContainer}>
                     <Button onClick={onClear}>
