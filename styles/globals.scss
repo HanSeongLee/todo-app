@@ -6,10 +6,18 @@ body {
   margin: 0;
   font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 18px;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: -0.17px;
   background: var(--theme-background-color);
   color: var(--theme-natural-color);
   transition: background 0.3s;
+
+  @include media(">desktop") {
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+  }
 }
 
 body {
@@ -42,8 +50,16 @@ a {
 
 * {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 18px;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: -0.17px;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
+  @include media(">desktop") {
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+  }
 }
