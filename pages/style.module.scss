@@ -1,0 +1,14 @@
+
+.main {
+  padding-bottom: 72px;
+
+  .todoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    > div:last-child {
+      margin-top: 24px;
+    }
+  }
+}
