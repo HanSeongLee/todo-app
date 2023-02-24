@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .todoBox {
   display: flex;
@@ -8,6 +9,12 @@
   outline: none;
   cursor: pointer;
 
+  &:hover {
+    .button {
+      opacity: 1;
+    }
+  }
+
   &.completed {
     .contents {
       color: var(--theme-gray-color);
@@ -17,10 +24,11 @@
 
   .contents {
     flex: 1;
-    font-size: 12px;
-    line-height: 12px;
-    letter-spacing: -0.17px;
     margin-left: 12px;
+
+    @include media(">desktop") {
+      margin-left: 24px;
+    }
   }
 
   .button {
@@ -30,9 +38,20 @@
     cursor: pointer;
     margin-left: 16px;
 
+    @include media(">desktop") {
+      margin-left: 24px;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
     svg {
       width: 12px;
       height: 12px;
+
+      @include media(">desktop") {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 }
