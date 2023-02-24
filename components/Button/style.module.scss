@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .button {
   font-size: 12px;
@@ -7,4 +8,15 @@
   background: transparent;
   border: 0;
   cursor: pointer;
+
+  @include media(">desktop") {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.19px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--theme-highlight-color);
+    }
+  }
 }
