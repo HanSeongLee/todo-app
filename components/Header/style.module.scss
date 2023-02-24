@@ -1,6 +1,11 @@
+@import "styles/utils";
 
 .header {
   padding: 48px 0 40px;
+
+  @include media(">desktop") {
+    padding-top: 70px;
+  }
 
   .container {
     display: flex;
