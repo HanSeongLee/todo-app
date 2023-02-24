@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .logo {
   display: flex;
@@ -8,5 +9,11 @@
     line-height: 27px;
     letter-spacing: 9.5px;
     color: var(--theme-white-color);
+
+    @include media(">desktop") {
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: 15px;
+    }
   }
 }
