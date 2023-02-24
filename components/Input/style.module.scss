@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .inputWrapper {
   display: flex;
@@ -9,20 +10,26 @@
 
   &.leftSide {
     padding-left: 20px;
+
+    @include media(">desktop") {
+      padding-left: 24px;
+    }
   }
 
   .input {
     flex: 1;
     min-height: 48px;
-    font-size: 12px;
-    line-height: 12px;
-    letter-spacing: -0.166667px;
     color: var(--theme-input-text-color);
     background: transparent;
     border: 0;
     padding: 0 12px;
     outline: 0;
     caret-color: var(--theme-primary-color);
+
+    @include media(">desktop") {
+      min-height: 64px;
+      padding: 0 24px;
+    }
 
     &::placeholder {
       color: var(--theme-secondary-color);
