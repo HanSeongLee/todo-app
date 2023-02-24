@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .tabs {
   min-height: 48px;
@@ -17,9 +18,16 @@
     letter-spacing: -0.19px;
     color: var(--theme-secondary-color);
     cursor: pointer;
+    transition: color 0.3s;
 
     &.active {
       color: var(--theme-primary-color);
+    }
+
+    @include media(">desktop") {
+      &:hover {
+        color: var(--theme-highlight-color);
+      }
     }
   }
 }
