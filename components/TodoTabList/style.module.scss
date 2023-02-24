@@ -1,6 +1,21 @@
+@import "styles/utils";
 
 .todoTabList {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  .tabsMobile {
+    @include media(">desktop") {
+      display: none;
+    }
+  }
+
+  .tabsDesktop {
+    display: none;
+
+    @include media(">desktop") {
+      display: flex;
+    }
+  }
 }

@@ -2,8 +2,8 @@ import React, { HTMLAttributes } from 'react';
 import styles from './style.module.scss';
 import TodoList from 'components/TodoList';
 import cn from 'classnames';
-import Tabs from 'components/Tabs';
 import { TabList } from 'types/tab';
+import Tabs from 'components/Tabs';
 
 interface IProps extends HTMLAttributes<HTMLDivElement>, TodoList, TabList {
 
@@ -14,6 +14,7 @@ const TodoTabList: React.FC<IProps> = ({
                                            onCompleted, onReorder, tabs, activeTabIndex,
                                            onChangeTab, className, ...props
                                        }) => {
+
     return (
         <div className={cn(styles.todoTabList, className)}
              {...props}
@@ -24,9 +25,17 @@ const TodoTabList: React.FC<IProps> = ({
                       onClear={onClear}
                       onCompleted={onCompleted}
                       onReorder={onReorder}
+                      footer={(
+                          <Tabs className={styles.tabsDesktop}
+                                items={tabs}
+                                activeIndex={activeTabIndex}
+                                onChangeTab={onChangeTab}
+                          />
+                      )}
             />
 
-            <Tabs items={tabs}
+            <Tabs className={styles.tabsMobile}
+                  items={tabs}
                   activeIndex={activeTabIndex}
                   onChangeTab={onChangeTab}
             />
