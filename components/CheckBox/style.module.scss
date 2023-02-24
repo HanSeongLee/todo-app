@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .checkBox {
   width: 20px;
@@ -6,6 +7,37 @@
   border: 1px solid var(--theme-light-gray-color);
   border-radius: 50%;
   cursor: pointer;
+
+  @include media(">desktop") {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    transition: border-color 0.3s;
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      border-radius: 100%;
+      background: var(--theme-gradient-color);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      padding: 1px;
+      margin: -1px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      content: "";
+    }
+
+    &:hover {
+      border-color: transparent;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
 
   &.checked {
     position: relative;
@@ -20,6 +52,11 @@
       height: 100%;
       background: url("/icons/icon-check.svg") no-repeat center;
       content: "";
+
+      @include media(">desktop") {
+        -webkit-mask-composite: initial;
+        opacity: 1;
+      }
     }
   }
 }
